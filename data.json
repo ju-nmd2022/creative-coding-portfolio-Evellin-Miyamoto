@@ -5,15 +5,3 @@
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
 
-  {
-    "file": "experiments/molnar_recriation_1.js",
-    "name": "Structured chaos",
-    "description": "During the class Molnar's art caught my attention. Decided to recriate it but tried to make it less crowded. Thought this would be a good beginning, being simple yet bold with the colors. The inspiration to decide to recriate this one, was the feeling of the chaos, but still with some structure. And for me, this is pretty much how life is."
-  },
-
-  {
-    "file": "experiments/molnar_variation_1.js",
-    "name": "Structured, animated chaos",
-    "description": "For this variation I am using the noise for the colors instead of the random. Another aspect is that it is an animated version, to be more dynamic and fun"
-  }
-]

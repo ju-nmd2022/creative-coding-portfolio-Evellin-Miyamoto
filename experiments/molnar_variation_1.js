@@ -7,11 +7,12 @@
 
 function setup() {
   createCanvas(800, 800);
+  frameRate(8);
 }
 const squares = 6;
 const size = 90;
 const divider = 5;
-const counter = 0;
+let counter = 0;
 
 function drawSquares() {
   let colors = [
