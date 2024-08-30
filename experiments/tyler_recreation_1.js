@@ -19,11 +19,12 @@ let angle = 360 / petals;
 function daisy() {
   for (let y = 0; y < petals; y++) {
     for (let x = 0; x < petals; x++) {
-      noStroke();
-      fill(255, 255, 250);
-      ellipse(x, y, 10, 10);
-      fill(36, 83, 210);
-      rect(x, y, 8, 50);
+      //   noStroke();
+      //   fill(255, 255, 250);
+      //   ellipse(x, y, 10, 10);
+      noFill();
+      stroke(36, 83, 210);
+      rect(x, y, 8, 50, 10);
       rotate(angle);
     }
   }
@@ -40,6 +41,9 @@ function draw() {
       translate(x, y);
       daisy();
       pop();
+      stroke(36, 83, 210);
+      fill(255, 255, 250);
+      ellipse(x, y, 21, 23);
       x += flowerSize + gap;
     }
     y += flowerSize + gap;
