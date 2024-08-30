@@ -15,5 +15,10 @@
     "file": "experiments/molnar_variation_1.js",
     "name": "Structured, animated chaos",
     "description": "For this variation I am using the noise for the colors instead of the random. Another aspect is that it is an animated version, to be more dynamic and fun"
+  },
+  {
+    "file": "experiments/molnar_variation_2.js",
+    "name": "Structured, animated, rainbow colors chaos",
+    "description": "For this variation I am still using the noise for the colors instead of the random. It is animated and this time I am using HSB for colorMode to criate a rainbow style of colors on the stroke of the rectangles. Also adjusted the frameRate to get a better visualisation."
   }
 ]

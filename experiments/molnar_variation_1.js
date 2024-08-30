@@ -43,4 +43,22 @@ function drawSquares() {
           random(-8, 10),
           random(size / 2 - 6, size + 8),
           random(-6, 6),
-         
+          random(size / 2 - 6, size + 8),
+          random(size / 2 - 6, size + 8),
+          random(-6, 6),
+          random(size / 2 - 6, size + 8)
+        );
+        pop();
+        counter += 0.05;
+      }
+    }
+  }
+}
+
+function draw() {
+  background(30);
+  //   noLoop();
+  noFill();
+  colorMode(RGB);
+  drawSquares();
+}
