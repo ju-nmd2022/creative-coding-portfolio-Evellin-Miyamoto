@@ -8,7 +8,7 @@
 
 function setup() {
   createCanvas(800, 800);
-  frameRate(8);
+  frameRate(3);
   colorMode(HSB);
 }
 const squares = 6;
@@ -39,7 +39,7 @@ function drawSquares() {
         translate(width / 14 + x * size, height / 14 + y * size);
         let noiseValue = noise(x / divider, y / divider, counter) * 255; // Generates noise value between 0 and 1
         //   let colorIndex = floor(map(noiseValue, 0, 1, 0, colors.length)); // Map noise to color index, floor to get a whole number
-        stroke(noiseValue, 100, 100);
+        stroke(noiseValue, 200, 200);
         quad(
           random(-8, 10),
           random(-8, 10),
@@ -51,7 +51,6 @@ function drawSquares() {
           random(size / 2 - 6, size + 8)
         );
         pop();
-        counter += 5;
         s++;
       }
     }
@@ -59,8 +58,9 @@ function drawSquares() {
 }
 
 function draw() {
-  background(30);
+  background(10);
   //   noLoop();
   noFill();
   drawSquares();
+  counter += 0.5;
 }
