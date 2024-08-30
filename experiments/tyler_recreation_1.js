@@ -23,9 +23,9 @@ function daisy() {
       //   fill(255, 255, 250);
       //   ellipse(x, y, 10, 10);
       noFill();
-      stroke(36, 83, 210);
+      stroke(36, 141, 210);
       rect(x, y, 8, 50, 10);
-      rotate(angle);
+      rotate(random());
     }
   }
 }
@@ -41,8 +41,8 @@ function draw() {
       translate(x, y);
       daisy();
       pop();
-      stroke(36, 83, 210);
-      fill(255, 255, 250);
+      stroke(36, 141, 210);
+      fill(235, 230, 230);
       ellipse(x, y, 21, 23);
       x += flowerSize + gap;
     }
