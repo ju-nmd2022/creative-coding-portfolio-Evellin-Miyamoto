@@ -37,9 +37,9 @@ function drawSquares() {
         push();
         //change the middle
         translate(width / 14 + x * size, height / 14 + y * size);
-        let noiseValue = noise(x / divider, y / divider, counter); // Generates noise value between 0 and 1
+        let noiseValue = noise(x / divider, y / divider, counter) * 255; // Generates noise value between 0 and 1
         //   let colorIndex = floor(map(noiseValue, 0, 1, 0, colors.length)); // Map noise to color index, floor to get a whole number
-        //   stroke(colors[colorIndex]);
+        stroke(noiseValue, 100, 100);
         quad(
           random(-8, 10),
           random(-8, 10),
@@ -51,7 +51,8 @@ function drawSquares() {
           random(size / 2 - 6, size + 8)
         );
         pop();
-        //   counter += 0.05;
+        counter += 5;
+        s++;
       }
     }
   }
