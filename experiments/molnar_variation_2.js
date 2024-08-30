@@ -17,16 +17,6 @@ const divider = 5;
 let counter = 0;
 
 function drawSquares() {
-  // let colors = [
-  //   color(255, 0, 0),
-  //   color(255, 255, 0),
-  //   color(0, 255, 0),
-  //   color(0, 0, 255),
-  //   color(255, 0, 255),
-  //   color(255, 255, 255),
-  //   color(0, 255, 255),
-  // ];
-
   for (i = 0; i < 10; i++) {
     //to draw the grids
     //square counter
@@ -37,8 +27,7 @@ function drawSquares() {
         push();
         //change the middle
         translate(width / 14 + x * size, height / 14 + y * size);
-        let noiseValue = noise(x / divider, y / divider, counter) * 255; // Generates noise value between 0 and 1
-        //   let colorIndex = floor(map(noiseValue, 0, 1, 0, colors.length)); // Map noise to color index, floor to get a whole number
+        let noiseValue = noise(x / divider, y / divider, counter) * 255; // Generates noise value between 0 and 1 times color
         stroke(noiseValue, 200, 200);
         quad(
           random(-8, 10),
@@ -59,7 +48,6 @@ function drawSquares() {
 
 function draw() {
   background(10);
-  //   noLoop();
   noFill();
   drawSquares();
   counter += 0.5;
