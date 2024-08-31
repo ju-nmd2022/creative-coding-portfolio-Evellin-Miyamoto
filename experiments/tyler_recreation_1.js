@@ -18,12 +18,9 @@ let petals = 5;
 let angle = 360 / petals;
 
 function daisy() {
-  let saturation = random(30, 100);
+  let saturation = random(20, 100);
   for (let y = 0; y < petals; y++) {
     for (let x = 0; x < petals; x++) {
-      //   noStroke();
-      //   fill(255, 255, 250);
-      //   ellipse(x, y, 10, 10);
       noFill();
       stroke(210, saturation, 75);
       rect(x, y, 8, 50, 10);

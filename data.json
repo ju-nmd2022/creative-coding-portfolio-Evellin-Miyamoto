@@ -20,5 +20,10 @@
     "file": "experiments/molnar_variation_2.js",
     "name": "Structured, animated, rainbow colors chaos",
     "description": "For this variation I am still using the noise for the colors instead of the random. It is animated and this time I am using HSB for colorMode to criate a rainbow style of colors on the stroke of the rectangles. Also adjusted the frameRate to get a better visualisation."
+  },
+  {
+    "file": "experiments/tyler_recreation_1.js",
+    "name": "Daisies",
+    "description": "Inspired on tyler Hobbs, I decided to recreate this art that shows a grid with blue daisies, one different from another with different saturation as well. It's a minimalistic style that I also enjoy, giving the feeling of peace."
   }
 ]
