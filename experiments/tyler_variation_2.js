@@ -6,6 +6,7 @@
 // Based on class live coding by Bassima
 // Based on Garrit class of Perlin Noise
 // Used the p5 reference https://p5js.org/reference/p5/noise/
+// Checked HSB colors here https://www.learnui.design/blog/the-hsb-color-system-practicioners-primer.html
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
@@ -20,7 +21,6 @@ let petals = 5;
 let noiseCounter = 0;
 
 function daisy(size, hue, saturation) {
-  // let saturation = random(20, 100);
   for (let y = 0; y < petals; y++) {
     for (let x = 0; x < petals; x++) {
       noFill();
@@ -44,7 +44,7 @@ function draw() {
 
       //perlin noise to change daisies size
       let noiseValueSize = noise(noiseCounter);
-      let flowerSizing = floor(map(noiseValueSize, 0, 1, 0, 5));
+      let flowerSizing = floor(map(noiseValueSize, 0, 1, 2, 5));
 
       //perlin noise to change the hue
       let hue = noise(noiseCounter);
@@ -56,8 +56,8 @@ function draw() {
 
       daisy(flowerSizing, saturationRange, hueRange);
       pop();
-      stroke(210, 75, 75);
-      fill(235, 0, 90);
+      stroke(45, 0, 75);
+      fill(60, 50, 90);
       ellipse(x, y, flowerSizing * 5, flowerSizing * 5);
       x += flowerSize + gap;
       noiseCounter += 0.1;

@@ -25,5 +25,15 @@
     "file": "experiments/tyler_recreation_1.js",
     "name": "Daisies",
     "description": "Inspired on tyler Hobbs, I decided to recreate this art that shows a grid with blue daisies, one different from another with different saturation as well. It's a minimalistic style that I also enjoy, giving the feeling of peace."
+  },
+  {
+    "file": "experiments/tyler_variation_1.js",
+    "name": "Spinning Daisies",
+    "description": "The first variation chosen was to add movement to the daisies. In this first version the daisies spins randomnly using perlin noise, but they are with the same colors, and with a balanced movement and placement of the petals, keeping it balanced. "
+  },
+  {
+    "file": "experiments/tyler_variation_2.js",
+    "name": "Growing Daisies",
+    "description": "The second variation I aimed for something more fun and colorful. Used perlin noise to make the colors of the daisies change and instead of the spinning movement this time the daisies are growing and shrinking giving it different sizes. The daisies shapes are more playful as well, giving to this version another feeling."
   }
 ]
