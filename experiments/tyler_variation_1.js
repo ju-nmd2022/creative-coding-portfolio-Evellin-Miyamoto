@@ -28,7 +28,7 @@ function daisy() {
       noFill();
       stroke(210, saturation, 75);
       rect(x, y, 8, 50, 10);
-      rotate(random());
+      rotate(360);
     }
   }
 }
@@ -45,13 +45,14 @@ function draw() {
       daisy();
       //perlin noise to make the daisies spin
       let noiseValue = noise(noiseCounter);
-      let rotation = floor(map(noiseValue, 0, 1, 0));
-      //   rotate(rotation);
+      let rotation = floor(map(noiseValue, 0, 1, 0, PI));
+      rotate(rotation);
       pop();
       stroke(210, 75, 75);
       fill(235, 0, 90);
       ellipse(x, y, 23, 22);
       x += flowerSize + gap;
+      noiseCounter += 0.1;
     }
     y += flowerSize + gap;
   }
