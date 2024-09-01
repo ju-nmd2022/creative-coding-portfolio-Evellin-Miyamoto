@@ -41,10 +41,6 @@ function draw() {
     for (let a = 0; a < amountOfDaisies; a++) {
       push();
       translate(x, y);
-      //perlin noise to make the daisies spin
-      // let noiseValue = noise(noiseCounter);
-      // let rotation = floor(map(noiseValue, 0, 1, 0, PI));
-      // rotate(rotation);
 
       //perlin noise to daisies change size
       let noiseValueSize = noise(noiseCounter);
@@ -54,7 +50,7 @@ function draw() {
       pop();
       stroke(210, 75, 75);
       fill(235, 0, 90);
-      ellipse(x, y, 23, 22);
+      ellipse(x, y, flowerSizing * 5, flowerSizing * 5);
       x += flowerSize + gap;
       noiseCounter += 0.1;
     }
