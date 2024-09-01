@@ -15,7 +15,6 @@ let flowerSize = 3;
 let amountOfDaisies = 7;
 let gap = 120;
 let petals = 5;
-let angle = 360 / petals;
 
 function daisy() {
   let saturation = random(20, 100);
