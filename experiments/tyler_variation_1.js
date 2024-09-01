@@ -11,14 +11,13 @@ function setup() {
   createCanvas(innerWidth, innerHeight);
   background(235, 230, 230);
   colorMode(HSB);
-  frameRate(1);
+  frameRate(2);
 }
 
 let flowerSize = 3;
 let amountOfDaisies = 7;
 let gap = 120;
 let petals = 5;
-let angle = 360 / petals;
 let noiseCounter = 0;
 
 function daisy() {
@@ -34,6 +33,7 @@ function daisy() {
 }
 
 function draw() {
+  background(240);
   let y =
     (height - flowerSize * amountOfDaisies - gap * (amountOfDaisies - 1)) / 2;
   for (let i = 0; i < amountOfDaisies; i++) {
@@ -42,11 +42,12 @@ function draw() {
     for (let a = 0; a < amountOfDaisies; a++) {
       push();
       translate(x, y);
-      daisy();
       //perlin noise to make the daisies spin
       let noiseValue = noise(noiseCounter);
       let rotation = floor(map(noiseValue, 0, 1, 0, PI));
       rotate(rotation);
+      daisy();
+
       pop();
       stroke(210, 75, 75);
       fill(235, 0, 90);
@@ -56,5 +57,4 @@ function draw() {
     }
     y += flowerSize + gap;
   }
-  // noLoop();
 }
