@@ -17,6 +17,7 @@ function setup() {
 let borders = 0;
 let columnGrid = 50;
 let gridCellSize = (width - borders * 2) / columnGrid;
+let noiseResolution = 0.003;
 
 function lines() {
   //grid
@@ -24,8 +25,28 @@ function lines() {
     for (y = borders; y < height - borders + 1; y += gridCellSize) {
       let oldX = x;
       let oldY = y;
+      for (i = 0; i < 10; i++) {
+        //length of each small segment
+        let segmentLength = random(gridCellSize * 0.01, gridCellSize * 0.2);
+
+        //noise for direction
+        let noiseValue =
+          noise(oldX * noiseResolution, oldY * noiseResolution) + 0.03;
+        let angle = map(noiseValue, 0.3, 0.7, 0, PI * 2);
+
+        let newX = cos(angle) * segmentLength + oldX;
+        let newY = sin(angle) * segmentLength + oldY;
+
+        line(oldX, oldY, newX, newY);
+
+        //update starting point for the next part
+        oldX = newX;
+        oldY = newY;
+      }
     }
   }
 }
 
-function draw() {}
+function draw() {
+  lines();
+}
