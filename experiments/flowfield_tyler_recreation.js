@@ -10,7 +10,7 @@ function setup() {
   createCanvas(innerWidth, innerHeight);
   colorMode(HSB);
   background(240, 0, 95);
-  stroke(0, 200);
+  stroke(5, 75, 100);
   strokeWeight(3);
 }
 
