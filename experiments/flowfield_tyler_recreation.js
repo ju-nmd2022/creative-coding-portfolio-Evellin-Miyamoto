@@ -27,7 +27,15 @@ function lines() {
       let oldY = y;
       for (i = 0; i < 10; i++) {
         //length of each small segment
-        let segmentLength = random(gridCellSize * 0.01, gridCellSize * 0.2);
+        let noiseSize = noise(oldX * noiseResolution, oldY * noiseResolution);
+        //segment length between 1% - 20% of the gridcellsize
+        let segmentLength = map(
+          noiseSize,
+          0,
+          1,
+          gridCellSize * 0.01,
+          gridCellSize * 0.3
+        );
 
         //noise for direction
         let noiseValue =
@@ -48,5 +56,6 @@ function lines() {
 }
 
 function draw() {
+  noLoop();
   lines();
 }
