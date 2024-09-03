@@ -7,7 +7,7 @@
 // Based on the help got from Garrit in the lab
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(innerWidth, innerHeight);
   frameRate(3);
   colorMode(HSB);
 }

@@ -6,7 +6,7 @@
 // Based on Garrit's class of Noise
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(innerWidth, innerHeight);
   frameRate(8);
 }
 const squares = 6;

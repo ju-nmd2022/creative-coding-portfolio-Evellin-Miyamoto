@@ -8,7 +8,7 @@
 // Used chatgpt to understand some parts, refresh memory and debug- https://chatgpt.com/share/7e418611-5716-4832-804a-4781220dac2f
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(innerWidth, innerHeight);
 }
 const squares = 6;
 const size = 90;
