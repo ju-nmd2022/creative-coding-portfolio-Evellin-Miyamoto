@@ -35,5 +35,20 @@
     "file": "experiments/tyler_variation_2.js",
     "name": "Growing Daisies",
     "description": "The second variation I aimed for something more fun and colorful. Used perlin noise to make the colors of the daisies change and instead of the spinning movement this time the daisies are growing and shrinking giving it different sizes. The daisies shapes are more playful as well, giving to this version another feeling."
+  },
+  {
+    "file": "experiments/flowfield_tyler_recreation.js",
+    "name": "Flow field",
+    "description": "Recreated Tyler Hobb's art, using flow field to generate this lines giving a structured, random pattern."
+  },
+  {
+    "file": "experiments/flowfield_variation_1.js",
+    "name": "Chaotic Flow field",
+    "description": "In this variation I changed some numbers and the shape used in the recreation, in order to have a chaotic version."
+  },
+  {
+    "file": "experiments/flowfield_variation_2.js",
+    "name": "Magnetic Flow field",
+    "description": "In this variation the mouse is interacting with the flow field creating an interesting feeling that the mouse is magnetic."
   }
 ]
