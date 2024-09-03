@@ -6,7 +6,7 @@
 // Based on the Garrit's class
 // Adapted the code from this tutorial https://www.youtube.com/watch?v=To3dtYEQaf4&list=PLnJOmsprq3bE0QLbe7wZ8yb1-Dt0FBcP5&index=19
 // Inspired by this tutorial https://www.youtube.com/watch?v=E7BD3vS-WbY
-
+// https://p5js.org/search/?term=vector
 function setup() {
   createCanvas(innerWidth, innerHeight);
   colorMode(HSB);
@@ -49,6 +49,11 @@ function lines(mouseX, mouseY) {
           let currentPosition = createVector(oldX, oldY);
           //vector for the mouse position
           let mousePosition = createVector(mouseX, mouseY);
+
+          //substract to get the position https://p5js.org/reference/p5.Vector/sub/
+          let direction = p5.Vector.sub(mousePosition, currentPosition);
+          // Calculate the angle pointing towards the mouse　// got help to fix this line from chatgpt
+          angle = direction.heading();
         } else {
           noiseValue =
             noise(oldX * noiseResolution, oldY * noiseResolution) + 0.03;
