@@ -13,11 +13,12 @@ function setup() {
   stroke(5, 75, 100);
   strokeWeight(3);
   frameRate(4);
+  gridCellSize = (width - borders * 2) / columnGrid;
 }
 
 let borders = 0;
 let columnGrid = 50;
-let gridCellSize = (width - borders * 2) / columnGrid;
+let gridCellSize;
 let noiseResolution = 0.3;
 
 function lines() {
