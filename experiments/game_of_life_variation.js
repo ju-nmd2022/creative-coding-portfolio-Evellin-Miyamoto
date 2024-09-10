@@ -79,11 +79,19 @@ function calculateNewState(x, y) {
 }
 
 function mousePressed() {
+  let radius = 5;
   let x = Math.floor(mouseX / size);
   let y = Math.floor(mouseY / size);
-  if (x >= 0 && x < boardsize && y >= 0 && y < boardsize) {
-    //change the state 0/1
-    board[x][y].state = (board[x][y].state + 1) % 2;
+
+  //loop to check if they are within the radius
+  for (let i = 0; i < boardsize; i++) {
+    for (let j = 0; j < boardsize; j++) {
+      let distance = dist(x, y, i, j);
+      //if distance is (less than equal)within the radius, change the state
+      if (distance <= radius) {
+        board[i][j].state = (board[i][j].state + 1) % 2;
+      }
+    }
   }
 }
 
