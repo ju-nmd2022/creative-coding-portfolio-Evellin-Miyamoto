@@ -78,12 +78,14 @@ function calculateNewState(x, y) {
   // >5 = 0
 }
 
-// function calculateLiving() {
-// let flat = board.flat();
-// let mapped = flat.map((cell) => cell.state);
-// let living = mapped.reduce((acc, cur) => acc + cur);
-// console.log(living);
-// }
+function mousePressed() {
+  let x = Math.floor(mouseX / size);
+  let y = Math.floor(mouseY / size);
+  if (x >= 0 && x < boardsize && y >= 0 && y < boardsize) {
+    //change the state 0/1
+    board[x][y].state = (board[x][y].state + 1) % 2;
+  }
+}
 
 function draw() {
   if (count == 0) {
@@ -95,7 +97,6 @@ function draw() {
         calculateNewState(i, j);
       }
     }
-    // calculateLiving();
 
     for (let i = 0; i < board.length; i++) {
       for (let j = 0; j < board[i].length; j++) {
@@ -110,8 +111,8 @@ function draw() {
 }
 
 /*
-  Any live cell with fewer than two live neighbours dies, as if by underpopulation.
-  Any live cell with two or three live neighbours lives on to the next generation.
-  Any live cell with more than three live neighbours dies, as if by overpopulation.
-  Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-  */
+    Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+    Any live cell with two or three live neighbours lives on to the next generation.
+    Any live cell with more than three live neighbours dies, as if by overpopulation.
+    Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+    */
