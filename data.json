@@ -44,5 +44,15 @@
     "file": "experiments/flowfield_variation_2.js",
     "name": "Magnetic Flow field",
     "description": "In this variation the mouse is interacting with the flow field creating an interesting feeling that the mouse is magnetic."
+  },
+  {
+    "file": "experiments/game_of_life.js",
+    "name": "Game of life",
+    "description": "First trial for the game of life. Used Garrit's class and code and played with some values and shapes. Liked the result with the triangles."
+  },
+  {
+    "file": "experiments/game_of_life_variation.js",
+    "name": "Game of life variation",
+    "description": "In this variation, we can click on the canvas to interact with the cells. The interaction happens within a radius giving it the possibility to interact with a certain area of the game."
   }
 ]
