@@ -54,5 +54,10 @@
     "file": "experiments/game_of_life_variation.js",
     "name": "Game of life variation",
     "description": "In this variation, we can click on the canvas to interact with the cells. The interaction happens within a radius giving it the possibility to interact with a certain area of the game."
+  },
+  {
+    "file": "experiments/game_of_life_sound.js",
+    "name": "Game of life with Sound",
+    "description": "In this variation, I am incorporating the sound effects learned on the class using tone.js."
   }
 ]
