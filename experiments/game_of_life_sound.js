@@ -97,9 +97,14 @@ function mousePressed() {
       }
     }
   }
-  synth.triggerAttackRelease("C4", "10n");
-  synth.triggerAttackRelease("E5", "9n");
+
+  let notes = ["E1", "E2", "E3", "E5", "E6"];
+  synth.triggerAttackRelease(random(notes), 0.3);
 }
+
+//   synth.triggerAttackRelease("E4", "10n");
+//   synth.triggerAttackRelease("E5", "10n");
+// }
 
 function draw() {
   if (count == 0) {
