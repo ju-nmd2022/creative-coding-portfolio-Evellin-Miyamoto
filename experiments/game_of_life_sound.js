@@ -98,8 +98,13 @@ function mousePressed() {
     }
   }
 
-  let notes = ["E1", "E2", "E3", "E5", "E6"];
-  synth.triggerAttackRelease(random(notes), 0.3);
+  let notesC = ["C3", "D3", "E3", "G3", "A3"];
+  let notesD = ["D5", "E5", "F5", "A5", "B5"];
+  let notesE = ["E6", "F6♯", "G6♯", "B6", "C6♯"];
+  synth.triggerAttackRelease(random(notesC), 0.3);
+  synth.triggerAttackRelease(random(notesD), 0.5);
+  synth.triggerAttackRelease(random(notesE), 0.5);
+  //   synth.triggerAttackRelease(random(notes), 1.5);
 }
 
 //   synth.triggerAttackRelease("E4", "10n");
