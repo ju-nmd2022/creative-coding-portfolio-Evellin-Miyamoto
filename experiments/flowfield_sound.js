@@ -6,35 +6,48 @@
 // Based on class live coding by Bassima
 // Based on Garrit class of Perlin Noise
 // Used the p5 reference https://p5js.org/reference/p5/noise/
+//https://medium.com/@otha.hernandez/an-introduction-to-creating-a-synth-with-tone-js-1aa8a51acbd5 used as a base to increment the sound effects
+//https://github.com/pixelkind/automatone/blob/main/automatone.js used as a base to increment the sound effects
 
 let synth;
-
-function setup() {
-  createCanvas(innerWidth, innerHeight);
-  background(235, 230, 230);
-  colorMode(HSB);
-  frameRate(2);
-  synth = new Tone.PolySynth().toDestination();
-}
-
 let flowerSize = 3;
 let amountOfDaisies = 7;
 let gap = 120;
 let petals = 5;
 let noiseCounter = 0;
 
-let notesC = ["C3", "D3", "E3", "G3", "A3"];
-let notesD = ["D5", "E5", "F5", "A5", "B5"];
-let notesE = ["E6", "F6♯", "G6♯", "B6", "C6♯"];
+// let notesC = ["C3", "D3", "E3", "G3", "A3"];
+// let notesD = ["D5", "E5", "F5", "A5", "B5"];
+// let notesE = ["E6", "F6♯", "G6♯", "B6", "C6♯"];
 
+let notes = ["C3", "D3", "E3", "G3", "A3", "C4", "D4", "E4", "G4"];
+
+let envelope = {
+  attack: 0.1,
+  decay: 0.2,
+  sustain: 0.3,
+  release: 1,
+};
+
+let oscilator = {
+  type: "sine",
+};
+
+function setup() {
+  createCanvas(innerWidth, innerHeight);
+  background(235, 230, 230);
+  colorMode(HSB);
+  frameRate(2);
+  synth = new Tone.PolySynth(oscilator, envelope).toDestination();
+}
 function daisy() {
   let saturation = random(20, 100);
   //map saturation from 20 to 100 to the notes lenght
-  let noteIndex = floor(map(saturation, 20, 100, 0, notesC.length - 1));
+  let noteIndex = floor(map(saturation, 20, 100, 0, notes.length - 1));
 
-  synth.triggerAttackRelease(notesC[noteIndex], 0.3);
-  synth.triggerAttackRelease(notesD[noteIndex], 0.5);
-  synth.triggerAttackRelease(notesE[noteIndex], 1);
+  //   synth.triggerAttackRelease(notesC[noteIndex], 0.3);
+  synth.triggerAttackRelease(notes[noteIndex], 1);
+  //   synth.triggerAttackRelease(notesE[noteIndex], 1);
 
   for (let y = 0; y < petals; y++) {
     for (let x = 0; x < petals; x++) {
