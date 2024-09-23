@@ -16,7 +16,7 @@ function setup() {
 }
 
 let borders = 0;
-let columnGrid = 50;
+let columnGrid = 100;
 let gridCellSize;
 let noiseResolution = 0.003;
 
