@@ -59,5 +59,10 @@
     "file": "experiments/game_of_life_sound.js",
     "name": "Game of life with Sound",
     "description": "In this variation, I am incorporating the sound effects learned on the class using tone.js."
+  },
+  {
+    "file": "experiments/flowfield_sound.js",
+    "name": "Sound to the spinning daisies",
+    "description": "In this variation, I am incorporating the sound effects learned on the class using tone.js."
   }
 ]
